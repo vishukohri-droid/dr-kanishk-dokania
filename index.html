@@ -36,7 +36,19 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--text-dark); background: var(--bg-color); overflow-x: hidden; }
+
+/* 🌟 UROLOGY PREMIUM BACKGROUND EFFECT ADDED HERE 🌟 */
+body { 
+  font-family: 'Plus Jakarta Sans', sans-serif; 
+  color: var(--text-dark); 
+  background-color: #f4f9fc; /* Soft Medical Blue */
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(212, 175, 55, 0.03), transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(10, 25, 47, 0.03), transparent 25%),
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230a192f' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); 
+  overflow-x: hidden; 
+}
+
 a { color: inherit; text-decoration: none; transition: 0.3s ease; }
 
 .container { width: min(1280px, 92%); margin: auto; }
@@ -65,8 +77,10 @@ header { position: sticky; top: 0; z-index: 100; background: var(--glass); backd
 .btn-gold:hover { transform: translateY(-3px); background: #e5c158; }
 .btn-outline { background: transparent; color: var(--primary); border: 2px solid var(--primary); }
 .btn-outline:hover { background: var(--primary); color: var(--gold); }
-.btn-call { background: var(--success); color: var(--white); box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3); }
-.btn-call:hover { transform: translateY(-3px); background: #20ba5a; }
+
+/* 🌟 UPDATED CALL BUTTON COLOR (BLACK TEXT) 🌟 */
+.btn-call { background: var(--success); color: #000000 !important; font-weight: 800; box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3); }
+.btn-call:hover { transform: translateY(-3px); background: #20ba5a; color: #000000 !important; }
 
 /* Hero Section */
 .hero { position: relative; padding: 120px 0 80px; background: linear-gradient(180deg, rgba(212, 175, 55, 0.05) 0%, rgba(255,255,255,0) 100%); }
@@ -79,7 +93,7 @@ h1 span { color: var(--gold); font-style: italic; }
 
 /* Image Showcase */
 .image-showcase { position: relative; height: 600px; display: flex; justify-content: center; align-items: flex-end; }
-.img-bg-shape { position: absolute; inset: 20px 10px 0 10px; background: #F7F5F0; border-radius: var(--radius-lg); z-index: 1; box-shadow: var(--shadow-md); border: 1px solid rgba(212, 175, 55, 0.15); }
+.img-bg-shape { position: absolute; inset: 20px 10px 0 10px; background: #ffffff; border-radius: var(--radius-lg); z-index: 1; box-shadow: var(--shadow-md); border: 1px solid rgba(212, 175, 55, 0.15); }
 .img-gold-border { position: absolute; inset: 0 30px 20px 10px; border: 3px solid var(--gold); border-radius: var(--radius-lg); z-index: 2; pointer-events: none; }
 .image-showcase img { position: relative; z-index: 3; width: 95%; height: 100%; object-fit: contain; object-position: center bottom; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.08)); }
 .glass-badge { position: absolute; bottom: 30px; left: -10px; right: 10px; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); padding: 22px; border-radius: var(--radius-md); box-shadow: var(--shadow-md); z-index: 4; border-left: 6px solid var(--gold); }
@@ -95,7 +109,7 @@ h1 span { color: var(--gold); font-style: italic; }
 .sec-title p { color: var(--text-muted); font-size: 17px; max-width: 600px; margin: auto; }
 .bg-navy .sec-title p { color: var(--gold-light); opacity: 0.8; }
 
-/* Fixed & Re-designed Full Width Grid Section (No unnecessary side spaces) */
+/* About Grid */
 .about-full-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 50px; align-items: start; margin-bottom: 50px; }
 .about-content h3 { font-family: 'Playfair Display', serif; font-size: 38px; color: var(--primary); margin-bottom: 12px; }
 .about-content .deg { color: var(--gold); font-weight: 700; margin-bottom: 25px; font-size: 18px; letter-spacing: 0.5px; }
@@ -120,31 +134,32 @@ h1 span { color: var(--gold); font-style: italic; }
 .srv-card p { color: var(--text-muted); line-height: 1.6; font-size: 15px; }
 
 /* Multi-City Hospitals */
-.hosp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-.hosp-card { background: var(--primary-light); padding: 25px; border-radius: var(--radius-md); border: 1px solid rgba(212,175,55,0.2); position: relative; overflow: hidden; transition: 0.3s; display: flex; flex-direction: column; justify-content: space-between; gap: 12px; }
+.hosp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.hosp-card { background: var(--primary-light); padding: 20px; border-radius: var(--radius-md); border: 1px solid rgba(212,175,55,0.2); position: relative; overflow: hidden; transition: 0.3s; display: flex; flex-direction: column; justify-content: space-between; gap: 10px; }
 .hosp-card:hover { background: var(--white); border-color: var(--gold); }
 .hosp-card:hover * { color: var(--primary) !important; }
-.hosp-card h3 { color: var(--gold); font-size: 20px; font-family: 'Playfair Display', serif; }
-.hosp-card .city { display: inline-block; background: var(--gold); color: var(--primary); font-size: 11px; font-weight: 800; padding: 3px 10px; border-radius: 20px; text-transform: uppercase; align-self: flex-start; }
-.hosp-time { background: rgba(0,0,0,0.2); padding: 12px; border-radius: var(--radius-sm); }
+.hosp-card h3 { color: var(--gold); font-size: 18px; font-family: 'Playfair Display', serif; margin-bottom: 4px; }
+.hosp-card .city { display: inline-block; background: var(--gold); color: var(--primary); font-size: 10px; font-weight: 800; padding: 4px 10px; border-radius: 20px; text-transform: uppercase; align-self: flex-start; margin-bottom: 5px; }
+.hosp-time { background: rgba(0,0,0,0.2); padding: 10px; border-radius: var(--radius-sm); }
 .hosp-card:hover .hosp-time { background: #f0f2f5; }
-.hosp-time div { display: flex; justify-content: space-between; font-size: 13px; color: var(--white); margin-bottom: 5px; }
+.hosp-time div { display: flex; justify-content: space-between; font-size: 12px; color: var(--white); margin-bottom: 4px; }
+.hosp-time div:last-child { margin-bottom: 0; }
 .hosp-time div strong { color: var(--gold-light); }
-.hosp-card p { color: #a9b9cc; font-size: 13px; line-height: 1.5; }
-.map-container { width: 100%; height: 130px; border-radius: var(--radius-sm); overflow: hidden; margin-top: 5px; border: 1px solid rgba(212,175,55,0.3); }
+.hosp-card p { color: #a9b9cc; font-size: 12px; line-height: 1.4; }
+.map-container { width: 100%; height: 110px; border-radius: var(--radius-sm); overflow: hidden; margin-top: 5px; border: 1px solid rgba(212,175,55,0.3); }
 .map-container iframe { width: 100%; height: 100%; border: 0; }
 .card-actions { display: flex; gap: 8px; margin-top: 5px; }
 
 /* Testimonials */
 .test-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
-.test-card { background: var(--white); padding: 30px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border: 1px solid #eee; }
+.test-card { background: var(--white); padding: 30px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border: 1px solid rgba(10,25,47,0.05); }
 .stars { color: var(--gold); font-size: 18px; margin-bottom: 15px; }
 .test-card p { font-style: italic; color: var(--text-muted); line-height: 1.7; margin-bottom: 20px; }
 .test-card h5 { color: var(--primary); font-weight: 700; }
 
 /* FAQs */
 .faq-wrap { max-width: 800px; margin: auto; }
-.faq-item { background: var(--white); border: 1px solid #ddd; margin-bottom: 15px; border-radius: var(--radius-sm); overflow: hidden; }
+.faq-item { background: var(--white); border: 1px solid rgba(10,25,47,0.08); margin-bottom: 15px; border-radius: var(--radius-sm); overflow: hidden; }
 .faq-q { padding: 20px; font-weight: 700; color: var(--primary); cursor: pointer; display: flex; justify-content: space-between; }
 .faq-a { padding: 0 20px 20px; color: var(--text-muted); line-height: 1.6; display: none; }
 
@@ -262,12 +277,10 @@ footer { background: var(--primary); padding: 60px 0 30px; color: var(--white); 
   </div>
 </section>
 
-<!-- Highly Professional Full Width About Section without extra blank/card spacing -->
+<!-- About Section -->
 <section class="section" id="about">
   <div class="container">
     <div class="about-full-grid">
-      
-      <!-- Left Side Description Content -->
       <div class="about-content">
         <span class="eyebrow">KNOW YOUR DOCTOR</span>
         <h3 id="live-about-heading">Meet Dr. Kanishk Dokania</h3>
@@ -275,8 +288,6 @@ footer { background: var(--primary); padding: 60px 0 30px; color: var(--white); 
         <p id="live-about-desc">Dr. Kanishk Dokania is a highly reputed Urologist and Renal Transplant Surgeon practicing primarily at Charak Hospital, Dubagga, Lucknow. Known for his empathetic approach and precise diagnoses, he has successfully handled numerous complex urological cases across India.</p>
         <p>He specializes in advanced laser surgeries for kidney stones (RIRS/PCNL), minimally invasive prostate therapies, and complete kidney transplant clinical frameworks, offering quick patient rehabilitation timelines.</p>
       </div>
-      
-      <!-- Right Side Qualifications Box Placement -->
       <div>
         <ul class="edu-list">
           <li>MCh Urology - Rajiv Gandhi Univ. of Health Sciences (2020)</li>
@@ -284,16 +295,12 @@ footer { background: var(--primary); padding: 60px 0 30px; color: var(--white); 
           <li>MBBS - West Bengal Univ. of Health Sciences (2010)</li>
         </ul>
       </div>
-      
     </div>
-
-    <!-- Full Width Premium Metrics Strip -->
     <div class="about-stats-strip">
       <div class="a-stat"><h4>15+</h4><span>Years Exp.</span></div>
       <div class="a-stat"><h4>10K+</h4><span>Surgeries</span></div>
       <div class="a-stat"><h4>5</h4><span>Cities OPD</span></div>
     </div>
-
   </div>
 </section>
 
@@ -507,30 +514,48 @@ footer { background: var(--primary); padding: 60px 0 30px; color: var(--white); 
   let clinicsData = [
     {
       id: "c1",
-      city: "Lucknow (Base)",
-      hosp: "Charak Hospital",
-      addr: "Hardoi Rd, Near Safed Masjid, Dubagga, Lucknow, UP 226003",
+      city: "LUCKNOW (DUBAGGA)",
+      hosp: "Charak Hospital & Research Centre",
+      addr: "Hardoi Road, Near Safed Masjid, Dubagga, Lucknow, Uttar Pradesh - 226003",
       days: "Mon - Sun",
       time: "10:00 AM - 05:00 PM",
       map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.947262102146!2d80.85292837543818!3d26.873397976669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bffabcb3abdfd%3A0x6b4fb6c1f1ec75f5!2sCharak%20Hospital!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
     },
     {
       id: "c2",
-      city: "Lucknow",
-      hosp: "Charak Hospital Pvt Ltd",
-      addr: "C/O Charak Hospital & Research Centre, Abbasnagar, Lucknow",
+      city: "LUCKNOW (ALIGANJ)",
+      hosp: "Charak Diagnostic Centre",
+      addr: "Sector C-36, Aliganj Main Road, Near Aliganj Post Office, Lucknow, Uttar Pradesh - 226024",
       days: "Mon - Sat",
       time: "10:00 AM - 08:00 PM",
       map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.947262102146!2d80.85292837543818!3d26.873397976669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bffabcb3abdfd%3A0x6b4fb6c1f1ec75f5!2sCharak%20Hospital!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
     },
     {
       id: "c3",
-      city: "Sitapur",
-      hosp: "Specialist OPD Unit",
-      addr: "Main Civil Lines Area, Sitapur",
-      days: "Every Tuesday",
-      time: "11:00 AM - 02:00 PM",
-      map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113176.22383842323!2d80.62779140656754!3d27.569947936162394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399e631ad7750ff7%3A0x9596c3bbcb343cfd!2sSitapur%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
+      city: "LUCKNOW (CHOWK)",
+      hosp: "Subhash Complex Clinic",
+      addr: "Subhash Complex, Near Akbari Gate, Chowk, Lucknow, Uttar Pradesh - 226003",
+      days: "Mon & Thu",
+      time: "02:00 PM - 04:00 PM",
+      map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.947262102146!2d80.85292837543818!3d26.873397976669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bffabcb3abdfd%3A0x6b4fb6c1f1ec75f5!2sCharak%20Hospital!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
+    },
+    {
+      id: "c4",
+      city: "LAKHIMPUR KHERI",
+      hosp: "Charak Polyclinic",
+      addr: "Main Station Road, Opposite District Hospital, Lakhimpur Kheri, Uttar Pradesh - 262701",
+      days: "Every Wednesday",
+      time: "11:00 AM - 03:00 PM",
+      map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.947262102146!2d80.85292837543818!3d26.873397976669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bffabcb3abdfd%3A0x6b4fb6c1f1ec75f5!2sCharak%20Hospital!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
+    },
+    {
+      id: "c5",
+      city: "HARDOI",
+      hosp: "Charak Hardoi Clinic",
+      addr: "Cinema Road, Near Hardoi Railway Station, Hardoi, Uttar Pradesh - 241001",
+      days: "Every Friday",
+      time: "11:00 AM - 03:00 PM",
+      map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.947262102146!2d80.85292837543818!3d26.873397976669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bffabcb3abdfd%3A0x6b4fb6c1f1ec75f5!2sCharak%20Hospital!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
     }
   ];
 
@@ -560,7 +585,7 @@ footer { background: var(--primary); padding: 60px 0 30px; color: var(--white); 
       card.innerHTML = `
         <div>
           <span class="city">${clinic.city}</span>
-          <h3 style="margin-top:5px; font-size:20px;">${clinic.hosp}</h3>
+          <h3 style="margin-top:5px;">${clinic.hosp}</h3>
           <p style="margin-top:5px;">${clinic.addr}</p>
         </div>
         <div>
@@ -572,8 +597,8 @@ footer { background: var(--primary); padding: 60px 0 30px; color: var(--white); 
             <iframe src="${clinic.map}" allowfullscreen="" loading="lazy"></iframe>
           </div>
           <div class="card-actions">
-            <button class="btn btn-gold" style="flex:1; padding:10px; font-size:12px;" onclick="openBot()">Book Here</button>
-            <a href="tel:+919140891110" class="btn btn-call" style="padding:10px 15px; font-size:12px;">📞 Call</a>
+            <button class="btn btn-gold" style="flex:1; padding:8px; font-size:12px;" onclick="openBot()">Book Here</button>
+            <a href="tel:+919140891110" class="btn btn-call" style="padding:8px 12px; font-size:12px;">📞 Call</a>
           </div>
         </div>
       `;
@@ -739,10 +764,11 @@ footer { background: var(--primary); padding: 60px 0 30px; color: var(--white); 
     setTimeout(() => {
       let options = `<div style="margin-bottom:10px;">Which <strong>Clinic</strong> do you prefer?</div>
       <div class="ai-opts">
-        <button class="ai-opt-btn" onclick="selectCity('Lucknow - Charak Hospital')">Lucknow - Charak Hospital</button>
-        <button class="ai-opt-btn" onclick="selectCity('Sitapur Clinic')">Sitapur Clinic</button>
-        <button class="ai-opt-btn" onclick="selectCity('Barabanki Clinic')">Barabanki Clinic</button>
-        <button class="ai-opt-btn" onclick="selectCity('Hardoi / Lakhimpur')">Hardoi / Lakhimpur</button>
+        <button class="ai-opt-btn" onclick="selectCity('Lucknow (Dubagga)')">Lucknow (Dubagga)</button>
+        <button class="ai-opt-btn" onclick="selectCity('Lucknow (Aliganj)')">Lucknow (Aliganj)</button>
+        <button class="ai-opt-btn" onclick="selectCity('Lucknow (Chowk)')">Lucknow (Chowk)</button>
+        <button class="ai-opt-btn" onclick="selectCity('Lakhimpur Kheri')">Lakhimpur Kheri</button>
+        <button class="ai-opt-btn" onclick="selectCity('Hardoi')">Hardoi</button>
       </div>`;
       addMsg(options, 'bot');
     }, 500);
